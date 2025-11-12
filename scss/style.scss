@@ -322,22 +322,27 @@ section:nth-child(6) {
     max-width: 598px;
     h2 {
         font-size: 48px;
-        line-height: 60px;
+        line-height: 48px;
     }
     .description {
         margin: 32px 0;
         color: #00000099;
         line-height: 24px;
     }
+    @media (max-width: 1275px) {
+        max-width: none;
+    }
 }
 
 .call-me {
     display: flex;
     align-items: center;
+    gap: 123px;
     @media (max-width: 1275px) {
         flex-direction: column-reverse;
-        gap: 27.5px;
+        gap: 24px;
         padding: 0 40px;
+        align-items: start;
     }
     @media (max-width: 725px) {
         flex-direction: column-reverse;
@@ -394,6 +399,13 @@ section:nth-child(6) {
     background: transparent;
 }
 
+.form-wrapper {
+    width: 100%;
+    max-width: 495px;
+    @media (max-width: 1275px) {
+        max-width: none;
+    }
+}
 
 form {
     display: flex;
@@ -403,7 +415,8 @@ form {
 }
 
 input {
-    width: 495px;
+    display: block;
+    width: 100%;
     height: 57px;
     border: 1px solid gray;
     border-radius: 8px;
@@ -413,7 +426,8 @@ input {
 }
 
 textarea {
-    width: 495px;
+    display: block;
+    width: 100%;
     height: 200px;
     border: 1px solid rgba($color: #000000, $alpha: 60%);
     border-radius: 8px;
@@ -424,6 +438,18 @@ textarea {
     font-family: "Open Sans", sans-serif;
 }
 
+.btn {
+    display: block;
+    width: 100%;
+    max-width: 495px;
+    @media (max-width: 1275px) {
+        max-width: none;
+    }
+    @media (max-width: 725px) {
+        max-width: none;
+    }
+}
+
 .contact-btn {
     padding: 21px 19.5px;
     background-color: black;
@@ -432,7 +458,12 @@ textarea {
     font-weight: 800;
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
-    width: 143px;
+    max-width: 143px;
+    width: 100%;
+    @media (max-width: 1275px) {
+        max-width: none;
+        width: 100%;
+    }
 }
 
 .contact {
@@ -440,6 +471,11 @@ textarea {
     flex-direction: row;
     gap: 24px;
     align-items: flex-start;
+    width: 100%;
+    max-width: 495px;
+    @media (max-width: 1275px) {
+        max-width: none;
+    }
     @media (max-width: 725px) {
         flex-direction: column;
     }
